@@ -25,7 +25,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Weekend Events</h1>
+      <h1 style= {{ color: "red", paddingTop:"50px"}}>Weekend Events</h1>
+      
       {showEvents && (
         <div>
           <button onClick={() => setShowEvents(false)}>Hide Events</button>
