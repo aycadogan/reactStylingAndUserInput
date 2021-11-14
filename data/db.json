@@ -1,0 +1,16 @@
+{
+    "events": [
+        {
+            "title": "React Dojo",
+            "id": 1
+        },
+        {
+            "title": "Svelte Meetup",
+            "id": 2
+        },
+        {
+            "title": "Remix Launch",
+            "id": 3
+        }
+    ]
+} 

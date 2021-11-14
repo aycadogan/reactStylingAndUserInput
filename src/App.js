@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import './App.css';
 import EventList from './EventList';
 import Modal from './Modal';
@@ -9,6 +9,14 @@ function App() {
   const [showModal, setShowModal] = useState(false)
   const [showEvents, setShowEvents] = useState(true)
   const [events, setEvents] = useState([])
+
+  // useEffect(() => {}, []) -> It should be inside of component at the top level, not inside of the function
+  useEffect(() => { 
+    fetch('http://localhost:3000/events')
+    .then(response => response.json())
+    .then(json => setEvents(json))
+    .catch(error => console.log(error))
+  }, [])
 
   const handleClose = () => {
     setShowModal(false)
